@@ -27,7 +27,6 @@ class LoginController extends Controller
 
     public function logout()
     {
-        // auth()->user()->currentAccessToken()->delete(); //Deleta apenas o token atual do usuário
         auth()->user()->tokens()->delete(); //Deleta todos os tokens do usuário
 
         return response()->json([], 204);
