@@ -16,6 +16,13 @@ O projeto usa Laravel 10+, logo, você precisa do PHP 8.1+ para conseguir execut
 - Execute o composer install.
 - php artisan key:generate
 - Certifique-se de que configurou o .env.
-- php artisan migrate --seed.
+- php artisan serve (provavelmente vai subir em http://127.0.0.1:8000)
+- Em um novo CLI, php artisan migrate --seed.
 
 Seguindo esses passos, o projeto será executado tranquilamente.
+Abaixo, seguem as instruções de uso da API documentadas com Swagger.
+
+## Documentação da API - Swagger
+- Acesse /api/docs depois de executar o php artisan serve.
+- Para gerar um token e poder testar as demais funções protegidas, durante o Seed é criado um usuário padrão de teste. A documentação já está com esses dados. Caso queira, use um software ([Postman]https://www.postman.com por exemplo), para testar com outros usuários.
+- Por se tratar de uma construção simplificada, não foi aplicado o ACL.
