@@ -14,8 +14,9 @@ O projeto usa Laravel 10+, logo, você precisa do PHP 8.1+ para conseguir execut
 - Clone o repositório para seu local de preferência.
 - Entre na pasta do projeto e abra o Terminal ou CLI de sua preferência.
 - Execute o composer install.
-- php artisan key:generate
+- Faça a cópia do .env.example e renomeie para .env
 - Certifique-se de que configurou o .env.
+- php artisan key:generate
 - php artisan serve (provavelmente vai subir em http://127.0.0.1:8000)
 - Em um novo CLI, php artisan migrate --seed.
 

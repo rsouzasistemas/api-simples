@@ -22,7 +22,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::put('/users/{id}', [UserController::class, 'update'])->name('update');
     Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('destroy');
 
-    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+    Route::delete('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');
