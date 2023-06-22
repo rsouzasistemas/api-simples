@@ -22,7 +22,11 @@ O projeto usa Laravel 10+, logo, você precisa do PHP 8.1+ para conseguir execut
 Seguindo esses passos, o projeto será executado tranquilamente.
 Abaixo, seguem as instruções de uso da API documentadas com Swagger.
 
+## Testes
+- php artisan test
+- Se preferir uma resposta mais incrementada, use php artisan test --testdox
+
 ## Documentação da API - Swagger
 - Acesse /api/docs depois de executar o php artisan serve.
-- Para gerar um token e poder testar as demais funções protegidas, durante o Seed é criado um usuário padrão de teste. A documentação já está com esses dados. Caso queira, use um software ([Postman](https://www.postman.com) por exemplo), para testar com outros usuários.
+- Para gerar um token e poder testar as demais funções protegidas, durante o Seed é criado um usuário padrão de teste. A documentação já está com esses dados.
 - Por se tratar de uma construção simplificada, não foi aplicado o ACL.

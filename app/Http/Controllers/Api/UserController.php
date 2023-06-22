@@ -92,6 +92,13 @@ class UserController extends Controller
     public function show(string $id)
     {
         $user = User::findOrFail($id);
+
+        if (!$user) {
+            return response()->json([
+                'User Not Found'
+            ], 404);
+        }
+
         return new UserResource($user);
     }
 
@@ -134,13 +141,16 @@ class UserController extends Controller
      */
     public function update(StoreUpdateUserRequest $request, string $id)
     {
-        $data = $request->all();
+        $user = User::findOrFail($id);
+
+        $data = $request->validated();
 
         if ($request->password) {
             $data['password'] = bcrypt($request->password);
+        } else {
+            $data['password'] = $user->password;
         }
 
-        $user = User::findOrFail($id);
         $user->update($data);
         return new UserResource($user);
     }

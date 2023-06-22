@@ -16,17 +16,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware(['auth:sanctum'])->group(function () {
-    #Rota multi verbo
-    Route::apiResource('/users', UserController::class);
+    Route::get('/users', [UserController::class, 'index'])->name('index');
+    Route::post('/users', [UserController::class, 'store'])->name('store');
+    Route::get('/users/{id}', [UserController::class, 'show'])->name('show');
+    Route::put('/users/{id}', [UserController::class, 'update'])->name('update');
+    Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('destroy');
 
-    #Rotas separadas
-    // Route::get('/users', [UserController::class, 'index']);
-    // Route::post('/users', [UserController::class, 'store']);
-    // Route::get('/users/{id}', [UserController::class, 'show']);
-    // Route::patch('/users/{id}', [UserController::class, 'update']);
-    // Route::delete('/users/{id}', [UserController::class, 'destroy']);
-
-    Route::post('/logout', [LoginController::class, 'logout']);
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
-Route::post('/login', [LoginController::class, 'login']);
+Route::post('/login', [LoginController::class, 'login'])->name('login');

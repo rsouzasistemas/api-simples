@@ -28,7 +28,8 @@ class StoreUpdateUserRequest extends FormRequest
             'password' => ['required', 'min:6', 'max:100']
         ];
 
-        if ($this->method() === 'PATCH') {
+        if ($this->method() === 'PUT') {
+            $rules['name'] = ['required', 'min:3', 'max:255'];
             $rules['email'] = [
                 'required',
                 'email',
