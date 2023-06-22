@@ -24,5 +24,5 @@ Abaixo, seguem as instruções de uso da API documentadas com Swagger.
 
 ## Documentação da API - Swagger
 - Acesse /api/docs depois de executar o php artisan serve.
-- Para gerar um token e poder testar as demais funções protegidas, durante o Seed é criado um usuário padrão de teste. A documentação já está com esses dados. Caso queira, use um software ([Postman]https://www.postman.com por exemplo), para testar com outros usuários.
+- Para gerar um token e poder testar as demais funções protegidas, durante o Seed é criado um usuário padrão de teste. A documentação já está com esses dados. Caso queira, use um software ([Postman](https://www.postman.com) por exemplo), para testar com outros usuários.
 - Por se tratar de uma construção simplificada, não foi aplicado o ACL.
